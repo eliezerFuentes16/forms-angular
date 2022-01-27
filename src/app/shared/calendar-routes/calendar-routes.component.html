@@ -1,0 +1,113 @@
+<div class="div-container">
+    <div class="div-head-table">
+        <div cdkDropList cdkDropListOrientation="horizontal" class="example-list2 head-table" (cdkDropListDropped)="drop($event)">
+            <div [cdkDragDisabled]="true" class="example-box2" *ngFor="let timePeriod of semana" cdkDrag><h4 class="title-head">{{timePeriod}}</h4></div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item">
+            <div
+            cdkDropList
+            class="example-list"
+            (cdkDropListDropped)="drop($event)"
+            >
+            <div
+            *ngFor="let carro of carros; let i = index"  [attr.data-index]="i"
+            class="example-box div-carro grillas-{{i}}"
+            [cdkDragData]="carro" [cdkDragDisabled]="true"
+            cdkDrag>{{carro}}</div>
+            </div>
+        </div>
+        <div class="flex-item " cdkDropListGroup>
+                <div class="example-container" >
+            
+                  <div
+                    cdkDropList
+                    [cdkDropListData]="espacio[0]"
+                    class="example-list grillas-{{i}}"
+                    (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                   
+                    <div class="example-box dias-semananas"  *ngFor="let item of espacio[0]" cdkDrag>{{item}}</div>
+                  </div>
+                </div>
+
+                <div class="example-container" >
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[1]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[1]" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+
+                <div class="example-container" >
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[2]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[2]" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+
+                <div class="example-container" >
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[3]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[3]" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+
+                <div class="example-container" >
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[4]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[4]" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+
+                <div class="example-container" >
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[5]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[5]" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+
+                <div class="example-container"  style="height: 100%;">
+            
+                  <div
+                  cdkDropList
+                  [cdkDropListData]="espacio[6]"
+                  class="example-list grillas-{{i}}"
+                  (cdkDropListDropped)="drop($event)" *ngFor="let espacio of espacios; let i = index"  [attr.data-index]="i">
+                      <div class="example-box dias-semananas" style="border:none!important" *ngFor="let item of espacio[6]" cdkDrag title="{{item}}">{{item}}</div>
+                    </div>
+                </div>
+            
+                <div class="example-container">          
+                    <div cdkDropList [cdkDropListData]="sellers" class="example-list" (cdkDropListDropped)="drop($event)">
+                        <div class="example-box" style="max-height: 61.2px;"  *ngFor="let item of sellers" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+        
+<button class="btn btn-primary" (click)="guardar()">Save</button>
+    
+        
+       

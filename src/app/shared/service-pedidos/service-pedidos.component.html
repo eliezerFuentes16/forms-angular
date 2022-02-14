@@ -1,0 +1,511 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+	<mat-stepper [linear]="isLinear" #stepper>
+	  <mat-step [stepControl]="firstFormGroup">
+	  
+	      <ng-template matStepLabel>Pedidos</ng-template>
+
+	      <div class="d-flex">
+			<div class="div-inputs-pedidos">
+				<mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Nit o C.C:</mat-label>
+                  <input matInput formControlName="nitOCC"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Cliente</mat-label>
+                  <input matInput formControlName="client"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Sede</mat-label>
+                  <input matInput formControlName="headquarters"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>N° de Poliza</mat-label>
+                  <input matInput formControlName="numberPolicy"
+                    type="text">
+                  
+                </mat-form-field>
+			</div>	 
+			     	<!--  -->
+			<div class="div-inputs-pedidos">
+				<mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Cantidad</mat-label>
+                  <input matInput formControlName="quantity"
+                    type="number">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Unidad de servicio</mat-label>
+                  <input matInput formControlName="unitService"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Description de tarifa</mat-label>
+                  <input matInput formControlName="descriptionRate"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Ven. Poliza</mat-label>
+                  <input matInput formControlName="venPolicy"
+                    type="text">
+                  
+                </mat-form-field>
+			</div>	 
+			     	<!--  -->
+			<div class="div-inputs-pedidos">
+				<mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>N° Cotizacion</mat-label>
+                  <input matInput formControlName="numberQuote"
+                    type="number">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Cliente</mat-label>
+                  <input matInput formControlName="client"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Origen</mat-label>
+                  <mat-select formControlName="origin">
+                    <mat-option value="">Origin 1</mat-option>
+                    <mat-option value="delete">Origin 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block mat-form-field">
+                  <mat-label>Destino</mat-label>
+                  <mat-select formControlName="destiny">
+                    <mat-option value="">Destiny 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+			</div>	      	
+	      </div>
+
+	  </mat-step>
+	  <!-- --------------------------------- -->
+	  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+	    <ng-template matStepLabel>Orden de Servicio</ng-template>
+
+	    	<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Orden de servicio Nro</mat-label>
+                  <input matInput formControlName="client"
+                    type="text">
+                  
+                </mat-form-field>
+
+
+	  </mat-step>
+	  <!-- --------------------------------- -->
+
+	  <mat-step [stepControl]="threeFormGroup">
+	    <ng-template matStepLabel >Datos de personas</ng-template>
+
+	    <div class="d-flex">
+	    	<div class="w-50">
+	    		<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Remitente</mat-label>
+                  <input matInput formControlName="sender"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Tipo de Documento</mat-label>
+                  <mat-select formControlName="typeDocumentSender">
+                    <mat-option value="">Documento 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Direccion</mat-label>
+                  <input matInput formControlName="directionSender"
+                    type="text">
+                  
+                </mat-form-field>
+
+              </div>
+
+              <div class="w-50">
+              	<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Telefono</mat-label>
+                  <input matInput formControlName="phoneSender"
+                    type="text">
+                  
+                </mat-form-field>
+
+               <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Numero de identificacion</mat-label>
+                  <input matInput formControlName="numberIdentificationSender"
+                    type="text">
+                  
+                </mat-form-field>
+      
+              </div>
+
+	    </div>
+	    <hr>
+
+	     <div class="d-flex">
+            <div class="w-50">
+	    	 <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Destinatario</mat-label>
+                  <input matInput formControlName="addresseeDesti"
+                    type="text">
+                  
+                </mat-form-field>
+
+                
+
+
+                 <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Tipo de documento</mat-label>
+                  <mat-select formControlName="directionDesti">
+                    <mat-option value="">Documento 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Direccion</mat-label>
+                  <input matInput formControlName="typeDocumentDesti"
+                    type="text">
+
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+
+                  <mat-label>Facturar a:</mat-label>
+                  <mat-select formControlName="billDesti">
+                    <mat-option value="">Factura 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="w-50">
+              	<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Telefono</mat-label>
+                  <input matInput formControlName="phoneDesti"
+                    type="text">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Destino</mat-label>
+                  <mat-select formControlName="numberIdentificationDesti">
+                    <mat-option value="">Destiny 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+      
+              </div>
+
+	    </div>
+
+
+	  </mat-step>
+
+	  <mat-step [stepControl]="firstFormGroup">
+	  
+	      <ng-template matStepLabel>Datos de la mercancia</ng-template>
+
+	      <div class="d-flex">
+			<div class="w-50">
+				<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Tipo de empaques</mat-label>
+                  <mat-select formControlName="typePackaging">
+                    <mat-option value="">Destiny 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Peso Aproximado(Tn)</mat-label>
+                  <input matInput formControlName="approximateWeight"
+                    type="number">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Mercancia</mat-label>
+                  <mat-select formControlName="merchandise">
+                    <mat-option value="">Destiny 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+
+                 <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Embalaje Especial</mat-label>
+                  <input matInput formControlName="specialPackaging"
+                    type="text">
+                  
+                </mat-form-field>
+			</div>
+
+			<div class="w-50">
+				<mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Unidad de empaque</mat-label>
+                   <input matInput formControlName="packingunit"
+                    type="number">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Volumen Promedio</mat-label>
+                  <input matInput formControlName="averageVolume"
+                    type="number">
+                  
+                </mat-form-field>
+
+                <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Valor Declarado</mat-label>
+                  <input matInput formControlName="declaredValue"
+                    type="text">
+                  
+                </mat-form-field>
+
+                 <mat-form-field class="p-10 d-block input-orden-servicio">
+                  <mat-label>Modalidad Despacho</mat-label>
+                 
+                   <mat-select formControlName="dispatchModality">
+                    <mat-option value="">Destiny 1</mat-option>
+                    <mat-option value="delete">Destiny 2</mat-option>
+                  </mat-select>
+                </mat-form-field>
+			</div>
+
+	      </div>
+
+
+
+
+	  </mat-step>
+	  <!-- --------------------------------- -->
+	  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+	    <ng-template matStepLabel>Datos del cargue</ng-template>
+	    <div>
+	    	<div class="d-flex">
+	    		<div  class="w-50">
+	    			 <mat-form-field class="mat-form-field" >
+						  <textarea matInput 
+						     placeholder="Condiciones Especiales" formControlName="specialConditions"></textarea>
+						</mat-form-field> 
+	    		</div>
+
+	    		<div  class="w-50">
+	    			<mat-form-field class="mat-form-field">
+					  <textarea matInput 
+					     placeholder="Sellos de seguridad y/o precintos:" formControlName="securitySeals"></textarea>
+					</mat-form-field> 
+	    		</div>
+                 
+
+	    	</div>
+	    	<div class="d-flex">
+	    	
+	    		<div style="width: 33.3%" class="d-flex">
+                  <mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Fecha minima de cargue</mat-label>
+				 	<input matInput formControlName="minimumLoadingDate"
+					 type="date">
+				  </mat-form-field>
+	    		</div>
+	    		<div style="width: 33.3%" class="d-flex">
+
+	    		  <mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Fecha Maxima de cargue</mat-label>
+				 	<input matInput formControlName="maximumLoadingDate"
+					 type="date">
+				  </mat-form-field>
+				</div>
+				  <div style="width: 33.3%" class="d-flex">
+	    		
+	    		  <mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Sellos de seguridad y/o precintos</mat-label>
+				 	<input matInput formControlName="securitySealsSeal"
+					 type="date">
+				  </mat-form-field>
+	    		</div>
+	    	</div>
+	    </div>
+
+
+
+
+	  </mat-step>
+	  <!-- --------------------------------- -->
+
+	  <mat-step [stepControl]="threeFormGroup">
+	    <ng-template matStepLabel >Tarifas</ng-template>
+      <div>
+         <mat-form-field class="p-10 d-block mat-form-field">
+          <mat-label>Fecha de vigencia inicial</mat-label>
+          <input matInput formControlName="initialEffectiveDate"
+           type="date">
+          </mat-form-field>
+      </div>
+
+      <div class="d-flex w-100">
+          <div style="width:10%; text-align:center; background: #eee; padding: 1rem 0px;" >#</div>
+          <div style="width:30%; text-align:center; background: #eee; padding: 1rem 0px;" >Vinculacion</div>
+          <div style="width:30%; text-align:center; background: #eee; padding: 1rem 0px;" >Flete Cliente</div>
+          <div style="width:30%; text-align:center; background: #eee; padding: 1rem 0px;" >Flete Conductor</div>
+      </div>
+
+       <div class="d-flex w-100">
+          <div style="width:10%; text-align:center">1</div>
+          <div style="width:30%; text-align:center;">Propio</div>
+          <div style="width:30%">
+            <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Cliente</mat-label>
+                  <input matInput formControlName="customerFreight1"
+                    type="text">
+                  
+                </mat-form-field>
+          </div>
+          <div style="width:30%">
+              <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Conductor</mat-label>
+                  <input matInput formControlName="freightDriver1"
+                    type="text">
+                  
+              </mat-form-field>
+          </div>
+      </div>
+
+      <div class="d-flex w-100">
+          <div style="width:10%; text-align:center">2</div>
+          <div style="width:30%; text-align:center;">Terceros</div>
+          <div style="width:30%">
+            <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Cliente</mat-label>
+                  <input matInput formControlName="customerFreight2"
+                    type="text">
+                  
+                </mat-form-field>
+          </div>
+          <div style="width:30%">
+              <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Conductor</mat-label>
+                  <input matInput formControlName="freightDriver2"
+                    type="text">
+                  
+              </mat-form-field>
+          </div>
+      </div>
+
+      <div class="d-flex w-100">
+          <div style="width:10%; text-align:center">3</div>
+          <div style="width:30%; text-align:center;">Socios</div>
+          <div style="width:30%">
+            <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Cliente</mat-label>
+                  <input matInput formControlName="customerFreight3"
+                    type="text">
+                  
+                </mat-form-field>
+          </div>
+          <div style="width:30%">
+              <mat-form-field class="p-10 d-block " style="width:90%; margin:auto; display: block">
+                  <mat-label>Flete Conductor</mat-label>
+                  <input matInput formControlName="freightDriver3"
+                    type="text">
+                  
+              </mat-form-field>
+          </div>
+      </div>
+
+      <div>
+          <mat-form-field class="mat-form-field">
+            <textarea matInput 
+               placeholder="Observaciones Tarifas:" formControlName="observationsTariffs"></textarea>
+          </mat-form-field> 
+      </div>
+
+
+	  </mat-step>
+    <mat-step [stepControl]="threeFormGroup">
+      <ng-template matStepLabel >Datos Adicionales</ng-template>
+
+      <div class="d-flex">
+        <div class="w-50">
+          <mat-checkbox class="p-10 " formControlName="requiresAccompaniment" style="width:80%; margin-left:10%; margin-bottom:10px;text-align: center">Requiere Acompañamiento</mat-checkbox>
+        </div>
+
+        <div class="w-50">
+          <mat-checkbox class="p-10 " formControlName="requiresSpecificPolicy" style="width:80%; margin-left:10%; margin-bottom:10px;text-align: center">Requiere Poliza especifica</mat-checkbox>
+        </div>
+
+      </div>
+
+      <div class="d-flex">
+        <div class="w-50">
+          <mat-form-field class="p-10 d-block" style="width:80%; margin:auto">
+             <mat-label>Agencia Encargada</mat-label>
+                   
+              <mat-select formControlName="agencyInCharge">
+                <mat-option value="">Destiny 1</mat-option>
+                <mat-option value="delete">Destiny 2</mat-option>
+              </mat-select>
+          </mat-form-field>      
+        </div>
+        <div class="w-50">
+        <mat-form-field class="p-10 d-block mat-form-field" style="width:80%; margin:auto">
+            <mat-label>Campo1 (Opcional)</mat-label>
+              <input matInput formControlName="camp1"
+              type="text">
+                  
+        </mat-form-field>  
+        </div>
+
+        
+      </div>
+
+      <div class="w-50">
+           <mat-form-field class="mat-form-field" style="width:80%; margin:auto" >
+              <textarea matInput 
+                 placeholder="Observaciones" formControlName="observations" ></textarea>
+            </mat-form-field> 
+        </div>
+
+        <div class="d-flex" style="margin-top:10px">
+          <div class="w-50">
+            <button type="submit" mat-raised-button color="primary"style="display:block; margin:auto" >Aceptar</button>
+          </div>          
+          <div class="w-50">
+            <button type="submit" mat-raised-button color="primary"style="display:block; margin:auto" >Borrar</button>
+            
+          </div>          
+        </div>
+
+    </mat-step>
+
+	</mat-stepper>
+
+	<!-- <button>Button</button> -->
+</form>

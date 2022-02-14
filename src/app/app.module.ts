@@ -13,13 +13,21 @@ import { MaterialModelModule } from './models/material-model/material-model.modu
 // import { TableComponent } from './components/table/table.component';
 // import { LoginComponent } from './shared/components/login/login.component';
 import { CalendarRoutesComponent } from './shared/calendar-routes/calendar-routes.component';
+// import { RatesComponent } from './shared/rates/rates.component';
+// import { AddComponent } from './shared/rates/add/add.component';
+// import { FleetComponent } from './shared/rates/fleet/fleet.component';
+// import { DatesComponent } from './shared/rates/dates/dates.component';
+import { CotizacionesComponent } from './shared/cotizaciones/cotizaciones.component';
+
+import { ServicePedidosComponent } from './shared/service-pedidos/service-pedidos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    CalendarRoutesComponent
+    CalendarRoutesComponent,
+    CotizacionesComponent,
+    ServicePedidosComponent
   ],
   imports: [
     BrowserModule,

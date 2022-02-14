@@ -1,0 +1,21 @@
+<!-- <app-calendar-routes></app-calendar-routes> -->
+
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+  
+      <ng-template matStepLabel>General Info</ng-template>
+      	<app-add-rate></app-add-rate>
+     
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+    <ng-template matStepLabel>Fleet</ng-template>
+    <app-fleet></app-fleet>
+  </mat-step>
+
+  <mat-step [stepControl]="threeFormGroup">
+    <ng-template matStepLabel >Dates</ng-template>
+    <app-dates></app-dates>
+    
+  </mat-step>
+</mat-stepper>

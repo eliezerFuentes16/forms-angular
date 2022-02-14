@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-rates',
+  templateUrl: './rates.component.html',
+  styleUrls: ['./rates.component.css']
 })
-export class AppComponent{
-   isLinear = false;
-  firstFormGroup!: FormGroup;
-  secondFormGroup!: FormGroup;
+export class RatesComponent implements OnInit {
 
+    isLinear = false;
+  	firstFormGroup!: FormGroup;
+  	secondFormGroup!: FormGroup;
+	threeFormGroup!: FormGroup;
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit() {
@@ -21,5 +22,9 @@ export class AppComponent{
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
+    this.threeFormGroup = this._formBuilder.group({
+      threedCtrl: ['', Validators.required],
+    });
   }
+
 }

@@ -24,6 +24,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
   declarations: [],
   imports: [
@@ -49,7 +50,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatChipsModule,
     MatDatepickerModule,
     MatCheckboxModule,
-    DragDropModule
+    DragDropModule,
+    MatStepperModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -73,7 +75,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatChipsModule,
     MatDatepickerModule,
     MatCheckboxModule,
-    DragDropModule
+    DragDropModule,
+    MatStepperModule
   ]
 })
 export class MaterialModelModule { }

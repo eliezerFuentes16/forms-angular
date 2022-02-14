@@ -1,0 +1,311 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+	<mat-stepper [linear]="isLinear" #stepper>
+	  <mat-step [stepControl]="firstFormGroup">
+	  
+	      <ng-template matStepLabel>Datos Basicos</ng-template>
+	      <div class="d-flex mt-4">
+	      		<div class="w-50">
+	      			<mat-form-field class="p-10 d-block mat-form-field">
+		                <mat-label>Nit ó C.C:</mat-label>
+		               	<input matInput formControlName="nitOCc"
+		                     type="text">
+		            </mat-form-field>
+
+		            <mat-form-field class="p-10 d-block mat-form-field">
+		                <mat-label>Quote N°</mat-label>
+		               	<input matInput formControlName="quoteNumber"
+		                     type="text">
+		            </mat-form-field>
+
+		            <mat-form-field class="p-10 d-block mat-form-field">
+		                <mat-label>payment terms</mat-label>
+		               	<input matInput formControlName="paymentTerms"
+		                     type="text">
+		            </mat-form-field>
+	      		</div>
+	      		<div class="w-50">
+	      			<mat-form-field class="p-10 d-block mat-form-field">
+		                <mat-label>Client</mat-label>
+		               	<input matInput formControlName="client"
+		                     type="text">
+		            </mat-form-field>
+
+		            <mat-form-field class="p-10 d-block mat-form-field">
+	                  <mat-label>Headquarters</mat-label>
+	                  <mat-select formControlName="headquarters">
+	                    <mat-option value="">Service 1</mat-option>
+	                    <mat-option value="delete">Service 2</mat-option>
+	                  </mat-select>
+	                  
+	                </mat-form-field>
+
+		            <mat-form-field class="p-10 d-block mat-form-field">
+	                  <mat-label>invoicing condition</mat-label>
+	                  <mat-select formControlName="invoicingCondition">
+	                    <mat-option value="">Service 1</mat-option>
+	                    <mat-option value="delete">Service 2</mat-option>
+	                  </mat-select>
+	                  
+	                </mat-form-field>
+	      		</div>
+	      </div>
+	      	
+
+            
+	     
+	  </mat-step>
+	  <!-- --------------------------------- -->
+	  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+	    <ng-template matStepLabel>Detal of rate</ng-template>
+	        
+	    <div class="d-flex mt-4">
+
+	    	<table class="w-100">
+				<thead>
+					<tr class="" style="text-align:center; background: #eee">
+
+
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="consolidable"></mat-checkbox></td>
+						<td>Description</td>
+						<td>Clase - Carroceria</td>
+						<td>Val. Unitario</td>
+						<td>% Maximo</td>
+						<td>Unidad de servicio</td>
+						<td>Minimos Requisitos</td>
+						<td>Origen</td>
+						<td>Destino</td>
+						<td>Flete Conductor</td>
+					</tr>
+				</thead>
+
+
+				<tbody>
+					<tr class="" style="text-align:center">
+
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="consolidable"></mat-checkbox></td>
+						<td>bogilayokombo</td>
+						<td>Tractomania-contener</td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>Valor Unitario</mat-label>
+				               	<input matInput formControlName="valUnit"
+				                     type="text">
+				            </mat-form-field>
+				        </td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>% Maximo</mat-label>
+				               	<input matInput formControlName="porMaximum"
+				                     type="text">
+				            </mat-form-field>
+						</td>
+						<td>Tonelada</td>
+						<td>0 Und</td>
+						<td>Barranquilla (Atlantico)</td>
+						<td>Yolombo (Antioquia)</td>
+						<td>Terceros: 110$</td>
+						
+
+					</tr>
+					
+					<tr class="" style="text-align:center">
+
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="consolidable"></mat-checkbox></td>
+						<td>bogilayokombo</td>
+						<td>Tractomania</td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>Valor Unitario</mat-label>
+				               	<input matInput formControlName="valUnit"
+				                     type="text">
+				            </mat-form-field>
+				        </td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>% Maximo</mat-label>
+				               	<input matInput formControlName="porMaximum"
+				                     type="text">
+				            </mat-form-field>
+						</td>
+						<td>Tonelada</td>
+						<td>0 Und</td>
+						<td>Barranquilla (Atlantico)</td>
+						<td>Yolombo (Antioquia)</td>
+						<td>Terceros: 110$</td>
+						
+
+					</tr>
+
+					<tr class="" style="text-align:center">
+
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="consolidable"></mat-checkbox></td>
+						<td>bogilayokombo</td>
+						<td>Tractomania</td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>Valor Unitario</mat-label>
+				               	<input matInput formControlName="valUnit"
+				                     type="text">
+				            </mat-form-field>
+				        </td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>% Maximo</mat-label>
+				               	<input matInput formControlName="porMaximum"
+				                     type="text">
+				            </mat-form-field>
+						</td>
+						<td>Tonelada</td>
+						<td>0 Und</td>
+						<td>Barranquilla (Atlantico)</td>
+						<td>Yolombo (Antioquia)</td>
+						<td>Terceros: 110$</td>
+						
+
+					</tr>
+					<tr class="" style="text-align:center">
+
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="consolidable"></mat-checkbox></td>
+						<td>bogilayokombo</td>
+						<td>Tractomania</td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>Valor Unitario</mat-label>
+				               	<input matInput formControlName="valUnit"
+				                     type="text">
+				            </mat-form-field>
+				        </td>
+						<td>
+							<mat-form-field class="p-10 d-block mat-form-field">
+				                <mat-label>% Maximo</mat-label>
+				               	<input matInput formControlName="porMaximum"
+				                     type="text">
+				            </mat-form-field>
+						</td>
+						<td>Tonelada</td>
+						<td>0 Und</td>
+						<td>Barranquilla (Atlantico)</td>
+						<td>Yolombo (Antioquia)</td>
+						<td>Terceros: 110$</td>
+						
+
+					</tr>
+
+					<tr class="bg-total" style="text-align:center; background: #eee">
+						<td class="p-3 fs-total" colspan="3">Total</td>
+						<td class="fs-total">370</td>
+						<td class="fs-total">0</td>
+						<td colspan="5"></td>
+					</tr>
+				</tbody>
+			</table>
+
+	    </div>
+
+
+
+
+	  </mat-step>
+	  <!-- --------------------------------- -->
+
+	  <mat-step [stepControl]="threeFormGroup">
+	    <ng-template matStepLabel >Vigencia Cotizacion</ng-template>
+	    <div class="d-flex w-100 mt-4">
+	    	<div class="" style="width:33.3%">
+		      <mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Fecha Cotizacion</mat-label>
+				 <input matInput formControlName="dateQuote"
+					 type="date">
+				</mat-form-field>
+			 </div>
+	    	<div class="" style="width:33.3%">
+				<mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Fecha Vig. inicial</mat-label>
+					 <input matInput formControlName="dateQuoteStart"
+					     type="date">
+				</mat-form-field>
+			 </div>
+
+			 <div class="" style="width:33.3%">
+				<mat-form-field class="p-10 d-block mat-form-field">
+					<mat-label>Fecha Vig. final</mat-label>
+					 <input matInput formControlName="dateQuoteEnd"
+					     type="date">
+				</mat-form-field>
+			 </div>
+		</div>
+	  </mat-step>
+
+	  <mat-step [stepControl]="threeFormGroup">
+	    <ng-template matStepLabel >Comerciales</ng-template>
+	      <table class="w-100">
+				<thead>
+					<tr class="" style="text-align:center; background: #eee">
+
+
+						<td class="p-3">|</td>
+						<td>ivg</td>
+						<td>Developer</td>
+						<td>CC Cedula</td>
+						<td>% comision</td>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="" style="text-align:center">
+
+						<td>1</td>
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="ivg"></mat-checkbox></td>
+						<td>Bersuano silvio</td>
+						<td>31009986</td>
+						<td>6</td>
+						
+
+					</tr>
+					<tr class="" style="text-align:center">
+
+						<td>1</td>
+
+						<td class="p-3"><mat-checkbox class="p-10 checkbox-requiereM " formControlName="ivg"></mat-checkbox></td>
+						<td>Bersuano silvio</td>
+						<td>31009986</td>
+						<td>6</td>
+						
+
+					</tr>
+				</tbody>
+		</table>
+	  </mat-step>
+
+	   <mat-step [stepControl]="threeFormGroup">
+	    <ng-template matStepLabel >Observaciones y condiciones</ng-template>
+	    <div>
+	    	
+	    	<mat-checkbox class="p-10 d-block mt-3 checkbox-requiereM " formControlName="opcion1">Deducible gasto: solo hasta por el valor del viaje y un poquito mas</mat-checkbox>
+
+	    	<mat-checkbox class="p-10 d-block mt-3  checkbox-requiereM " formControlName="opcion2">Solicitamos que nos envien copia de su poliza con el objetivo de hacer conocer a nuestro corredor de seguros y la aseguraadora las condiciones concretas de operacion y amparos con ustedes</mat-checkbox>
+
+	    	<mat-checkbox class="p-10 d-block mt-3  checkbox-requiereM " formControlName="opcion3">DESTINATARIOS: Un destinatarios por viaje</mat-checkbox>
+
+	    	<mat-checkbox class="p-10 d-block mt-3  checkbox-requiereM " formControlName="opcion4">CARGUES Y DESCARGUES: Por cuenta del cliente</mat-checkbox>
+
+	    	<mat-checkbox class="p-10 d-block mt-3  checkbox-requiereM " formControlName="opcion5">STAND-BT: las demoras por parte del cliente remitente o destinatario superior a 12 horas correra por cuenta del cliente a razaon de $ 150.000 por dia o traccio</mat-checkbox>
+
+	    	<mat-checkbox class="p-10 d-block mt-3  checkbox-requiereM " formControlName="opcion6">Disponiblida: toda solicitud de despacho debera informarse al menos con 12 horas de antelacion</mat-checkbox>
+
+
+	    </div>   
+	  </mat-step>
+
+
+	</mat-stepper>
+
+	<!-- <button>Button</button> -->
+</form>

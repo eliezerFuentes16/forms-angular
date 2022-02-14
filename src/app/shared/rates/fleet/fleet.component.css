@@ -1,0 +1,22 @@
+.mat-form-field{
+	width:80%;
+	margin:auto;
+}
+
+.checkbox-requiereM {
+	margin-left: 10%
+}
+
+.p-10{
+	margin-top:6px;
+
+}
+
+input, mat-label, mat-select, mat-option{
+	font-size:15px;
+}
+
+.inputs-flete-clientes{
+	width:30%;
+	
+}

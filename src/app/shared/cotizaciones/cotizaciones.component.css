@@ -1,0 +1,58 @@
+.mat-form-field{
+	width:80%;
+	margin:auto;
+}
+
+.checkbox-requiereM {
+	margin-left: 10%
+}
+
+.p-10{
+	margin-top:6px;
+
+}
+
+input, mat-label, mat-select, mat-option{
+	font-size:15px;
+}
+
+.d-block{
+	display:block;
+}
+
+.d-flex{
+	display:flex;
+}
+
+.w-50{
+	width:50%;
+}
+
+.w-100{
+	width:100%;
+}
+
+
+.text-center{
+	text-align: center
+}
+
+.mt-2{
+  margin: 0.5rem !important;
+
+}
+
+.mt-3{
+  margin: 1rem !important;
+
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+
+.p-3 {
+  padding: 1rem !important;
+}

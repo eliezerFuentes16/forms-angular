@@ -1,0 +1,72 @@
+<mat-card>
+
+	<div class="d-flex">
+		<div class="w-50">
+			<mat-form-field class="p-10 d-block mat-form-field">
+				<mat-label>Descripcion de la tarifa</mat-label>
+				<input matInput formControlName="descripcion"
+					required type="text">
+				
+			</mat-form-field>
+
+			<mat-form-field class="p-10 d-block mat-form-field" >
+				<mat-label>Origen</mat-label>
+				<mat-select>
+					<mat-option value="">drive4</mat-option>
+					<mat-option value="delete">driver5</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+
+			<mat-form-field class="p-10 d-block mat-form-field">
+				<mat-label>% de tolerancia</mat-label>
+				<input matInput formControlName="tolerancia"
+					required type="number">
+				<mat-error>Invalido
+				</mat-error>
+			</mat-form-field>
+
+
+			<mat-form-field class="p-10 d-block mat-form-field">
+				<mat-label>Tarifa Ministerio (Tn)</mat-label>
+				<input matInput formControlName="tarifaM"
+					required type="number">
+				<mat-error>Invalido
+				</mat-error>
+			</mat-form-field>
+
+			<mat-checkbox  class="p-10 m-l-16 checkbox-requiereM ">Requiere Minimos</mat-checkbox>
+
+		</div>
+		<div class="w-50">
+
+			<mat-form-field class="p-10 d-block mat-form-field">
+				<mat-label>Unidad de Servicio</mat-label>
+				<mat-select>
+					<mat-option value="">Service 1</mat-option>
+					<mat-option value="delete">Service 2</mat-option>
+				</mat-select>
+				
+			</mat-form-field>
+
+			<mat-form-field class="p-10 d-block mat-form-field" >
+				<mat-label>Destino</mat-label>
+				<mat-select>
+					<mat-option value="">drive4</mat-option>
+					<mat-option value="delete">driver5</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+
+			<mat-form-field class="p-10 d-block mat-form-field">
+				<mat-label>Minimo Unidades</mat-label>
+				<input matInput formControlName="tolerancia"
+					required type="number">
+				<mat-error>Minimo unidades
+				</mat-error>
+			</mat-form-field>
+
+			<mat-checkbox class="p-10 checkbox-requiereM ">Es consolidable</mat-checkbox>
+		</div>
+	</div>
+</mat-card>
